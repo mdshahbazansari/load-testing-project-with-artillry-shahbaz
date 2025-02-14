@@ -1,0 +1,16 @@
+config:
+  target: 'http://localhost:4000'
+  phases:
+    - duration: 5
+      arrivalRate: 20
+      name: 'get product'
+
+scenarios:
+  - name: 'put product'
+    flow:
+      - put:
+          url: '/product/67afb20050e7fc006beb9b70'
+          json:
+            title: 'testing update'
+            description: 'hello testing product update'
+            price: 200

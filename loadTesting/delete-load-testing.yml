@@ -1,0 +1,12 @@
+config:
+  target: 'http://localhost:4000'
+  phases:
+    - duration: 5
+      arrivalRate: 20
+      name: 'get product'
+
+scenarios:
+  - name: 'post product'
+    flow:
+      - delete:
+          url: '/product/67afb20050e7fc006beb9b70'
